@@ -6,7 +6,7 @@
 /*   By: lserodon <lserodon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/07 14:36:40 by lserodon          #+#    #+#             */
-/*   Updated: 2025/03/24 13:21:49 by lserodon         ###   ########.fr       */
+/*   Updated: 2025/03/24 17:12:08 by lserodon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,11 +77,7 @@ void	move_character(t_game *game, int x, int y)
 	else if (game->map.map[new_y][new_x] == 'E')
 	{
 		if (game->nbr_collectibles == 0)
-		{
 			close_game(game);
-			ft_printf("Félicitations, vous avez fini le jeu en %i coups\n",
-				game->count_moves);
-		}
 		else
 			return ;
 	}

@@ -6,7 +6,7 @@
 /*   By: lserodon <lserodon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 09:21:18 by lserodon          #+#    #+#             */
-/*   Updated: 2025/03/13 13:43:15 by lserodon         ###   ########.fr       */
+/*   Updated: 2025/03/24 17:16:27 by lserodon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,10 @@ char	**split_map(char *argv, int count)
 	fd = open(argv, O_RDONLY);
 	map = malloc(sizeof(char *) * (count + 1));
 	if (!map)
+	{
+		close(fd);
 		return (NULL);
+	}
 	while (i < count)
 	{
 		map[i] = get_next_line(fd);
