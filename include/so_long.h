@@ -6,7 +6,7 @@
 /*   By: lserodon <lserodon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/17 11:39:01 by lserodon          #+#    #+#             */
-/*   Updated: 2025/03/24 17:09:43 by lserodon         ###   ########.fr       */
+/*   Updated: 2025/03/24 17:19:02 by lserodon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,6 @@ typedef struct s_game
 	int			chara_y;
 	int			count_moves;
 	char		**copy_map;
-	int			fd;
 	t_resources	map;
 }				t_game;
 
