@@ -6,7 +6,7 @@
 /*   By: lserodon <lserodon@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 16:52:47 by lserodon          #+#    #+#             */
-/*   Updated: 2025/03/13 17:06:59 by lserodon         ###   ########.fr       */
+/*   Updated: 2025/03/27 14:59:57 by lserodon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ void	check_ber(char *argv, t_game *game)
 	if (len < 5)
 	{
 		write(2, "Invalid file\n", 13);
-		free(game);
+		free_all(game);
 		exit(1);
 	}
 	cmp = ft_strrchr(argv, '.');
 	if (ft_strncmp(cmp, ".ber", 4))
 	{
 		write(2, "Invalid file\n", 13);
-		free(game);
+		free_all(game);
 		exit(1);
 	}
 }
