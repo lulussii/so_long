@@ -26,7 +26,7 @@ $(NAME): $(OBJ) Makefile $(HEADER)
 	@echo "$(NAME) successfully created! 🎉"
 
 $(LIBFT): force
-	@make -C libft --silent
+	@make -C libft 
 
 $(MLX):
 	@make -C mlx_linux  >/dev/null 2>&1

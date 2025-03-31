@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lserodon <lserodon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lulussi <lulussi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:33:47 by lserodon          #+#    #+#             */
-/*   Updated: 2025/03/11 11:25:21 by lserodon         ###   ########.fr       */
+/*   Updated: 2025/03/31 08:24:34 by lulussi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@
 # include <stdlib.h>
 # include <string.h>
 # include <unistd.h>
+# include <stdarg.h>
 
 /* ------ FONCTIONS ------ */
 
@@ -96,8 +97,8 @@ int					ft_printchar(int c);
 int					ft_printstr(char *str);
 int					ft_printf(const char *format, ...);
 int					ft_printnbr_base(long int nb, char *base, int base_size);
-int					ft_printnbr_p(unsigned long int nb, char *base,
-						unsigned long int base_size);
+int					ft_printnbr_p(long int nb, char *base,
+						long int base_size);
 int					sort_format(const char format, va_list args);
 
 #endif

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf_utils.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lserodon <lserodon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lulussi <lulussi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/29 17:18:48 by lserodon          #+#    #+#             */
-/*   Updated: 2025/03/03 09:40:36 by lserodon         ###   ########.fr       */
+/*   Updated: 2025/03/31 08:24:18 by lulussi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,9 +51,9 @@ int	ft_printnbr_base(long int nb, char *base, int base_size)
 	return (len);
 }
 
-int	ft_printnbr_p(unsigned long int nb, char *base, unsigned long int base_size)
+int	ft_printnbr_p(long int nb, char *base, long int base_size)
 {
-	unsigned long int	len;
+	long int	len;
 
 	len = 0;
 	if (nb == 0)

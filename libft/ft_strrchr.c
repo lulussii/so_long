@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lserodon <lserodon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lulussi <lulussi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/08 09:28:57 by lserodon          #+#    #+#             */
-/*   Updated: 2024/11/22 15:38:09 by lserodon         ###   ########.fr       */
+/*   Updated: 2025/03/31 08:47:19 by lulussi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ char	*ft_strrchr(const char *s, int c)
 	int		i;
 	char	tmp_c;
 
+	if (!s)
+		return (NULL);
 	tmp_c = (char)c;
 	i = ft_strlen(s);
 	while (i >= 0)

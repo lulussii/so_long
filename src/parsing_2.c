@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   parsing_2.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lserodon <lserodon@student.42.fr>          +#+  +:+       +#+        */
+/*   By: lulussi <lulussi@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/03 16:52:47 by lserodon          #+#    #+#             */
-/*   Updated: 2025/03/27 14:59:57 by lserodon         ###   ########.fr       */
+/*   Updated: 2025/03/31 08:32:03 by lulussi          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ void	check_ber(char *argv, t_game *game)
 {
 	char	*cmp;
 	int		len;
+	int		strcmp;
 
 	len = ft_strlen(argv);
 	if (len < 5)
@@ -25,7 +26,8 @@ void	check_ber(char *argv, t_game *game)
 		exit(1);
 	}
 	cmp = ft_strrchr(argv, '.');
-	if (ft_strncmp(cmp, ".ber", 4))
+	strcmp = ft_strncmp(cmp, ".ber", 4);
+	if (strcmp || strcmp == -1)
 	{
 		write(2, "Invalid file\n", 13);
 		free_all(game);
