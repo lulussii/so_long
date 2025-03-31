@@ -20,7 +20,7 @@ OBJ = $(SRC:$(SRC_DIR)/%.c=$(OBJ_DIR)/%.o)
 
 all: $(LIBFT) $(MLX) $(NAME)
 
-$(NAME): $(OBJ) Makefile $(HEADER)
+$(NAME): $(OBJ)
 	@echo "Compiling $(NAME)..."
 	@$(CC) $(CFLAGS) $(OBJ) $(LIBFT) $(MLX) $(MLX_FLAGS) -o $(NAME)
 	@echo "$(NAME) successfully created! 🎉"
@@ -31,7 +31,7 @@ $(LIBFT): force
 $(MLX):
 	@make -C mlx_linux  >/dev/null 2>&1
 
-$(OBJ): $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c | $(OBJ_DIR)
+$(OBJ): $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c Makefile $(HEADER) | $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -c $< -o $@
 
 $(OBJ_DIR):
